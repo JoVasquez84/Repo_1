@@ -30,9 +30,20 @@ const students = [
   }
 ];
 
+
+
 app.get('/students',(req,res) =>{
+    const search=req.query.search;
+    if (req.query.search) {
+        res.send(students.filter(
+
+        )
+        )
+
+    }
   res.send(JSON.stringify(students))
 })
+
 
 app.listen(port,() => {
   console.log(`App is running on port ${port}`)
